@@ -1,10 +1,12 @@
 {
   "name": "pomodoro-desktop",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
-  "main": "src/electron-starter.js",
+  "main": "public/electron-starter.js",
   "homepage": "./",
+  "author": "Mateusz Górzański",
   "dependencies": {
+    "electron-is-dev": "^0.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
@@ -14,11 +16,26 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "dev": "nf start"
+    "dev": "nf start",
+    "electron-pack": "build --em.main=build/electron-starter.js",
+    "preelectron-pack": "yarn build"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "electron": "^1.7.10",
+    "electron-builder": "^19.51.0",
     "foreman": "^2.0.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "wait-on": "^2.0.2"
+  },
+  "build": {
+    "appId": "tk.mateuszgorzanski.pomodoro",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
