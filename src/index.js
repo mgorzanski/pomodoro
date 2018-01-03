@@ -48,7 +48,7 @@ class App extends React.Component {
     updateTimer() {
         if (this.state.minutes === 0 && this.state.seconds === 0) {
             this.stop();
-            let alarm = new Audio('/sounds/alarm.mp3');
+            let alarm = new Audio('sounds/alarm.mp3');
             alarm.volume = 0.2;
             alarm.play();
         } else {
