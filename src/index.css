@@ -21,6 +21,7 @@
   font-family: 'Bungee', cursive;
   font-size:4em;
   text-align: center;
+  cursor:default;
 }
 
 .buttons-menu {
@@ -40,4 +41,18 @@
   margin-right:4px;
   background-color:rgb(148, 12, 12);
   color:#fff;
+}
+
+.buttons-menu li:active {
+  background-color:#700909;
+}
+
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }

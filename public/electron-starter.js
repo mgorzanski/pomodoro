@@ -13,7 +13,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 480, height: 300})
+  mainWindow = new BrowserWindow({width: 480, height: 300, resizable: false, icon: path.join(__dirname, './icon.png')})
 
   // and load the index.html of the app.
   const startUrl = process.env.ELECTRON_START_URL || url.format({
